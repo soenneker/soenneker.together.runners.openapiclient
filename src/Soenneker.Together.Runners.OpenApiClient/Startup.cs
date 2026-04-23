@@ -23,12 +23,12 @@ public static class Startup
     public static IServiceCollection SetupIoC(this IServiceCollection services)
     {
         services.AddHostedService<ConsoleHostedService>()
-                .AddScoped<IFileOperationsUtil, FileOperationsUtil>()
-                .AddRunnersManagerAsScoped()
-                .AddFileDownloadUtilAsScoped()
-                .AddYamlUtilAsScoped()
-                .AddKiotaUtilAsScoped()
-                .AddOpenApiFixerAsScoped();
+                .AddSingleton<IFileOperationsUtil, FileOperationsUtil>()
+                .AddRunnersManagerAsSingleton()
+                .AddFileDownloadUtilAsSingleton()
+                .AddYamlUtilAsSingleton()
+                .AddKiotaUtilAsSingleton()
+                .AddOpenApiFixerAsSingleton();
 
         return services;
     }
