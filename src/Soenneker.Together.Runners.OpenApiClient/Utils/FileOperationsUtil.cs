@@ -64,7 +64,7 @@ public sealed class FileOperationsUtil : IFileOperationsUtil
         await _fileUtil.DeleteIfExists(jsonFilePath, cancellationToken: cancellationToken);
         await _fileUtil.DeleteIfExists(fixedFilePath, cancellationToken: cancellationToken);
 
-        string openApiDocumentUrl = _configuration["Together:ClientGenerationUrl"] ?? "https://raw.githubusercontent.com/togethercomputer/openapi/refs/heads/main/openapi.yaml";
+        string openApiDocumentUrl = _configuration["Together:ClientGenerationUrl"] ?? "https://docs.together.ai/openapi.yaml";
 
         string? filePath = await _fileDownloadUtil.Download(openApiDocumentUrl,
             targetFilePath, fileExtension: ".yaml", cancellationToken: cancellationToken);
