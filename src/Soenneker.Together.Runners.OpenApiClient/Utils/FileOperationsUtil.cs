@@ -37,8 +37,8 @@ public sealed class FileOperationsUtil : IFileOperationsUtil
     private readonly IYamlUtil _yamlUtil;
 
     public FileOperationsUtil(ILogger<FileOperationsUtil> logger, IConfiguration configuration, IGitUtil gitUtil, IDotnetUtil dotnetUtil,
-        IFileDownloadUtil fileDownloadUtil, IFileUtil fileUtil, IDirectoryUtil directoryUtil, IKiotaUtil kiotaUtil, IOpenApiFixer openApiFixer,
-        IYamlUtil yamlUtil)
+        IFileDownloadUtil fileDownloadUtil, IFileUtil fileUtil, IDirectoryUtil directoryUtil, IKiotaUtil kiotaUtil,
+        IYamlUtil yamlUtil, IOpenApiFixer openApiFixer)
     {
         _logger = logger;
         _configuration = configuration;
