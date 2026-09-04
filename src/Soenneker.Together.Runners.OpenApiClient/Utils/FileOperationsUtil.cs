@@ -22,6 +22,7 @@ using Soenneker.OpenApi.Fixer.Abstract;
 
 namespace Soenneker.Together.Runners.OpenApiClient.Utils;
 
+/// <inheritdoc cref="IFileOperationsUtil" />
 public sealed class FileOperationsUtil : IFileOperationsUtil
 {
     private readonly ILogger<FileOperationsUtil> _logger;
